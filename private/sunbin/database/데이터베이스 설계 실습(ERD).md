@@ -20,7 +20,8 @@
 
 *후보 엔터티, 후보 속성
 
-![스크린샷 2026-01-05 213925.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-01-05_213925.png)
+<img width="1380" height="466" alt="스크린샷_2026-01-05_213925" src="https://github.com/user-attachments/assets/ceff27a2-0bef-43a5-ad5e-3a416b3efd01" />
+
 
 **2. 개념적 모델링**
 
@@ -32,7 +33,8 @@
 - 엔터티 간 관계 정의
 - 관계의 책임 정의
 
-![스크린샷 2026-01-06 021640.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-01-06_021640.png)
+<img width="1662" height="1073" alt="스크린샷_2026-01-06_021640" src="https://github.com/user-attachments/assets/61c01c68-19e4-416c-a98c-fcad14254c9f" />
+
 
 **3. 논리적 모델링**
 
@@ -67,7 +69,8 @@
     효율적이지 못한 DB설계이다.
     
 
-![스크린샷 2026-01-06 024236.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-01-06_024236.png)
+<img width="1794" height="995" alt="스크린샷_2026-01-06_024236" src="https://github.com/user-attachments/assets/ccf0157a-a614-4cc6-b997-9b78d537d53b" />
+
 
 **5. 물리적 모델링**
 
