@@ -76,7 +76,7 @@ for book in books:				# SELECT * FROM book; (1번 실행)
 								# ... (book 의 갯수만큼 N번 실행)
 ```  
 
-실제 예시)  
+실제 예시 구현)  
 <img width="1549" height="908" alt="스크린샷 2026-01-07 12 34 11" src="https://github.com/user-attachments/assets/9dce6c19-45c6-430a-95ef-6d3af2c48816" />
 
 
@@ -107,7 +107,7 @@ print(users[0])	# 해당 줄에서 재사용한다.
 - **selected-related( )** 는 **Join**을 통해 데이터를 즉시 로딩 하는 방식  
 - **prefetch_related( )** 는 **추가 쿼리를 실행**하여 데이터를 즉시 로딩 하는 방식  
 
-※ **values( )**, **values_list( )**를 사용하면 즉시 로딩(Eager Loading) 옵션이 무시된다.  
+※ **values( )**, **values_list( )** 를 사용하면 즉시 로딩(Eager Loading) 옵션이 무시된다.  
 → values( ), values_list( ) 는 DB Row 단위로 데이터를 반환하기 때문에, 객체(Object)와 관계(Relational) 간 매핑이 일어나지 않는다.  
 
 <br>
