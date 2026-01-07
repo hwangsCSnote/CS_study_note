@@ -22,7 +22,7 @@ Java, Python 과 같은 객체 지향 언어로 RDB 테이블에 접근하는 �
 ### ORM의 단점
 - 객체 지향 언어를 사용하지만 ORM 문법을 따로 학습해야 한다.
 - 추상화 정도가 높아, 비교적 복잡하고 정교한 데이터 접근이 필요한 경우 SQL을 활용해야 한다.
-- 대규모 데이터베이스를 처리하거나 쿼리의 복잡도가 높을 경우 성능 문제가 발생할 수 있다.  
+- 대규모 데이터베이스를 처리하거나 쿼리의 복잡도가 높을 경우 **성능 문제**가 발생할 수 있다.  
 
 <br>
 <br>
@@ -49,11 +49,37 @@ for user in users:	# 정말 필요한 시점인 해당 줄에서 데이터를 �
 Django는 기본적으로 **지연 로딩 방식**을 사용하여 쿼리셋을 통해 쿼리문을 실행한다.  
 때문에 발생할 수 있는 문제들이 있는데 대표적으로 **N+1 Problem** 이 있다.
 
-**N+1 Problem**
+<br>
 
-```
+**N+1 Problem**  
+Django의 **지연 로딩**(Lazy Loading) 특성에 의해 발생하는 문제로  
+한 번의 접근으로 가져올 수 있는 데이터를 불필요하게 DB에 여러 번 접근하여 성능 저하를 일으키는 문제.  
 
+예시)  
+```python
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
 ```  
+
+```python
+books = Book.objects.all()
+
+for book in books:				# SELECT * FROM book; (1번 실행)
+    print(book.author.name)		
+								# SELECT name FROM author WHERE id = 1;
+								# SELECT name FROM author WHERE id = 2;
+								# SELECT name FROM author WHERE id = 3;
+								# ... (book 의 갯수만큼 N번 실행)
+```  
+
+실제 예시)  
+<img width="1549" height="908" alt="스크린샷 2026-01-07 12 34 11" src="https://github.com/user-attachments/assets/9dce6c19-45c6-430a-95ef-6d3af2c48816" />
+
+
 
 <br>
 <br>
@@ -76,4 +102,17 @@ print(users[0])	# 해당 줄에서 재사용한다.
 3. **즉시 로딩**(Eager Loading)
 > 즉시 로딩(Eager Loading)은 지연 로딩(Lazy Loading)의 반대 개념으로,   
 > 필요한 데이터만 가져오지 않고 한번의 SQL로 필요할 수 있는 모든 데이터를 가져오는 방식이다.   
-> Django에서는 즉시 로딩을 위해 **select-related( )**, **prefetch_related( )** 메서드를 제공한다.
+> Django에서는 즉시 로딩을 위해 **select-related( )**, **prefetch_related( )** 메서드를 제공한다.  
+
+- **selected-related( )** 는 **Join**을 통해 데이터를 즉시 로딩 하는 방식  
+- **prefetch_related( )** 는 **추가 쿼리를 실행**하여 데이터를 즉시 로딩 하는 방식  
+
+※ **values( )**, **values_list( )**를 사용하면 즉시 로딩(Eager Loading) 옵션이 무시된다.  
+→ values( ), values_list( ) 는 DB Row 단위로 데이터를 반환하기 때문에, 객체(Object)와 관계(Relational) 간 매핑이 일어나지 않는다.  
+
+<br>
+<br>
+
+References
+- [Django ORM \(QuerySet\)구조와 원리 그리고 최적화전략 - 김성렬 - PyCon Korea 2020](https://www.youtube.com/watch?v=EZgLfDrUlrk)
+- [객체 관계형 매핑\(ORM\)이란 무엇인가요? - 객체 관계형 매핑 설명됨 - AWS](https://aws.amazon.com/what-is/object-relational-mapping/)
