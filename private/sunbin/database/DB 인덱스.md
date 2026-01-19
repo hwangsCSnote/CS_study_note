@@ -92,7 +92,8 @@ SHOW INDEX FROM player;
 ### B-TREE 기반 동작 방법
 
 **B-TREE 기본 구조(이진 트리)**
-<img width="1255" height="554" alt="스크린샷_2026-01-19_020135" src="https://github.com/user-attachments/assets/4effd301-f68f-41fe-94be-3a68afc450a0" />
+
+<img width="1097" height="527" alt="스크린샷 2026-01-15 102106" src="https://github.com/user-attachments/assets/ea9842e1-de54-48e1-8410-4592c9a9f6c6" />
 
 
 *이진 탐색 트리* 기본 설명은 다음과 같다
