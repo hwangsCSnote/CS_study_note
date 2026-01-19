@@ -105,7 +105,8 @@ Optimizer가 join이 포함된 쿼리문을 분석하여 실행 시간을 기반
 }
 ```
 
-![스크린샷 2026-01-19 012006.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-01-19_012006.png)
+<img width="1206" height="572" alt="스크린샷_2026-01-19_012006" src="https://github.com/user-attachments/assets/d808081d-5fcb-452f-afdc-6ccc9d0aeaed" />
+
 
 **DRIVING TABLE/DRIVEN TABLE (선행 / 후행 테이블)**
 
@@ -145,7 +146,8 @@ index의 존재 여부, 통계 정보(조건에 따라 얼마나 줄어드는지
 2. 후행 테이블에서 정렬 작업 수행
 3. 정렬된 결과를 이용하여 조인을 수행
 
-![스크린샷 2026-01-19 020135.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-01-19_020135.png)
+<img width="1255" height="554" alt="스크린샷_2026-01-19_020135" src="https://github.com/user-attachments/assets/da9a08a2-7359-434d-ba82-0c9ed36eeab9" />
+
 
 **Hash Join (해시 조인)**
 
@@ -156,7 +158,8 @@ index의 존재 여부, 통계 정보(조건에 따라 얼마나 줄어드는지
 3. 후행 테이블에서 조건에 만족하는 행을 찾음
 4. 만족하는 행을 해시 테이블로 직접 찾아 저장함
 
-![스크린샷 2026-01-19 021436.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-01-19_021436.png)
+<img width="1253" height="575" alt="스크린샷_2026-01-19_021436" src="https://github.com/user-attachments/assets/c6df1864-60ee-4b3c-a106-e7073d4cabae" />
+
 
 ### 실행 순서
 
