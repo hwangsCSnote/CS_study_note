@@ -92,8 +92,8 @@ SHOW INDEX FROM player;
 ### B-TREE 기반 동작 방법
 
 **B-TREE 기본 구조(이진 트리)**
+<img width="1255" height="554" alt="스크린샷_2026-01-19_020135" src="https://github.com/user-attachments/assets/4effd301-f68f-41fe-94be-3a68afc450a0" />
 
-![스크린샷 2026-01-15 102106.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-01-15_102106.png)
 
 *이진 탐색 트리* 기본 설명은 다음과 같다
 
@@ -103,8 +103,8 @@ SHOW INDEX FROM player;
 이를 DB INDEX에서 값을 찾는 방식에서 찾아볼 수 있다.
 
 **INDEX가 하나의 attribute만을 탐색할 경우**
+<img width="1853" height="907" alt="스크린샷 2026-01-15 105048" src="https://github.com/user-attachments/assets/f5216598-fc68-429e-a3e8-df11c21a350d" />
 
-![스크린샷 2026-01-15 105048.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-01-15_105048.png)
 
 a에 대한 index를 생성했다면 DB는 기본적으로 a에 대해 정렬된 테이블을 가지고 있게 된다.
 
@@ -131,8 +131,8 @@ where index(a) = 9 and index(b) = 95;
 ```
 
 이처럼 and연산자로 여러 attribute의 조건을 만족시키는 행을 찾아야할 경우 인덱스 table은 다음과 같이 정렬된다.
+<img width="1656" height="775" alt="스크린샷 2026-01-15 110034" src="https://github.com/user-attachments/assets/64b74b6f-668f-45f5-ab92-02c627dc9ec6" />
 
-![스크린샷 2026-01-15 110034.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-01-15_110034.png)
 
 해당 table을 통해 조건을 탐색하는 순서는 다음과 같다.
 
@@ -168,6 +168,7 @@ select team_id, backnumber from player
 where team_id = 9 and backnumber = 95; 
 ```
 
-![스크린샷 2026-01-15 113427.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-01-15_113427.png)
+<img width="432" height="272" alt="스크린샷 2026-01-15 113427" src="https://github.com/user-attachments/assets/1e56558f-af00-4ffd-a641-d96a38925821" />
+
 
 해당 코드를 통해 가져온다고 가정했을 때 player table에 team_id_back_number_idx의 인덱스 테이블을 활용하여 기존 player table을 탐색하지 않고 값을 찾을 수 있다.
