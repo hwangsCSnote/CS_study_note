@@ -36,9 +36,9 @@ OS가 CPU에게 할당해주는 가장 최소 단위의 작업(Task)이다.
 CPU스케줄러에서 실제로 CPU에게 전달해주는 것은 프로세스가 아닌 프로세스안의 스레드다
 
 > **프로세스 상태**
-> 
+>
 
-![스크린샷 2026-02-05 030503.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-02-05_030503.png)
+<img width="879" height="387" alt="스크린샷_2026-02-05_030503" src="https://github.com/user-attachments/assets/376e0ee0-61dd-4e03-8357-8ff7106fbb1b" />
 
 > **생성 상태**
 > 
@@ -128,7 +128,8 @@ OS에서 더이상 사용하지 않는다는게 명확해지면 PCB마저 지우
 > **메모리 구조**
 > 
 
-![스크린샷 2026-02-05 030727.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-02-05_030727.png)
+<img width="449" height="612" alt="스크린샷_2026-02-05_030727" src="https://github.com/user-attachments/assets/8f3f1853-d0c3-40be-8977-bed4f6186418" />
+
 
 - Stack
     
@@ -150,7 +151,8 @@ OS에서 더이상 사용하지 않는다는게 명확해지면 PCB마저 지우
     
     Stack Frame이 사라진다
     
-    ![스크린샷 2026-02-05 030541.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-02-05_030541.png)
+   <img width="688" height="552" alt="스크린샷_2026-02-05_030541" src="https://github.com/user-attachments/assets/fb43b03f-ff89-4eb4-b6eb-780e57ba27f2" />
+
     
     ```java
     [ bar 스택 프레임 ]
@@ -223,7 +225,8 @@ OS에서 더이상 사용하지 않는다는게 명확해지면 PCB마저 지우
 
 라고 말한다 프로세스 종료 상태에서 PCB가 사라지면 프로세스가 완전히 종료된 것을 의미한다
 
-![스크린샷 2026-02-05 031110.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-02-05_031110.png)
+<img width="333" height="573" alt="스크린샷_2026-02-05_031110" src="https://github.com/user-attachments/assets/7602608b-1bb3-4590-9fa0-538a9f386ff6" />
+
 
 - Pointer
     
@@ -256,4 +259,4 @@ OS에서 더이상 사용하지 않는다는게 명확해지면 PCB마저 지우
 
 그 외에 PCB에 빠르게 접근하기 위해 Process table을 통해 PCB를 관리한다
 
-![스크린샷 2026-02-05 031449.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-02-05_031449.png)
+<img width="782" height="610" alt="스크린샷_2026-02-05_031449" src="https://github.com/user-attachments/assets/3a0ae5cc-6002-428d-86d7-119d30adfd9b" />
