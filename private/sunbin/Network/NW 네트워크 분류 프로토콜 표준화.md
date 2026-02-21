@@ -51,7 +51,8 @@ www.naver.com을 [http://www.naver.com으로](http://www.naver.com으로) 지정
 
 **HTTP 통신 구조**
 
-![스크린샷 2026-02-18 225026.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-02-18_225026.png)
+<img width="1421" height="356" alt="스크린샷_2026-02-18_225026" src="https://github.com/user-attachments/assets/c807c3f0-67d8-4871-b9be-3f91ea27de7a" />
+
 
 **HTTP의 무상태성(Stateless)**
 
@@ -102,7 +103,8 @@ PSH : 데이터를 즉시 목적지로 보내라는 의미
 
 FIN : 접속 종료를 위한 플래그
 
-![스크린샷 2026-02-18 231330.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-02-18_231330.png)
+<img width="1194" height="1053" alt="스크린샷_2026-02-18_231330" src="https://github.com/user-attachments/assets/d40e29df-ae95-437f-8564-b2f061f0078d" />
+
 
 1. 클라이언트에서 SYN 패킷 전달(응답을 위해 SYN_SENT상태로 변환)
 2. LISTEN 상태의 서버가 SYN을 받고 요청 수락 ACK/SYN 패킷을 전달(SYN_RCVD 상태로 변환하여 클라이언트의 ACK패킷을 대기)
