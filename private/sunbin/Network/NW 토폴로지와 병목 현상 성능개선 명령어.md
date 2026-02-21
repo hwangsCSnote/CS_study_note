@@ -3,7 +3,8 @@
 > **네트워크 토폴로지**
 > 
 
-![스크린샷 2026-02-18 210740.png](%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2026-02-18_210740.png)
+<img width="918" height="503" alt="스크린샷_2026-02-18_210740" src="https://github.com/user-attachments/assets/8cd2e8ef-c5b7-4104-bdfa-6dd6ab67c73e" />
+
 
 노드와 링크가 어떻게 배치되어 있는지에 대한 방식, 연결 형태
 
