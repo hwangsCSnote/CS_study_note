@@ -31,7 +31,7 @@
 > 라우터에 들어있는 목적지 정보들과 목적지로 가기 위한 방법이 들어있는 리스트  
 
 - `netstat -r`  을 통해 라우팅 테이블 정보를 확인할 수 있다.  
-
+<img width="529" alt="스크린샷 2026-03-11 19 42 17" src="https://github.com/user-attachments/assets/63049e52-ff5e-48b6-8f9d-bd1fedc2868b" />
 
 
 **게이트웨이** (Gateway)  
@@ -58,7 +58,9 @@ ex) `::ffff:0326:a6d6`
 
 **클래스 기반 할당 방식**  
 > IP 주소 체계를 규모(호스트 수)에 따라 A, B, C, D, E 다섯 개의 클래스로 구분하는 방식  
+<img width="474" alt="image" src="https://github.com/user-attachments/assets/ba1fbedc-2422-4549-b83c-c1b81062157c" />
 
+<br>
 
 - **A 클래스** : 대규모 네트워크용  
   - ( `0 ~ 127` )  
@@ -90,25 +92,36 @@ ex) `::ffff:0326:a6d6`
 > IP 주소 및 기타 통신 매개변수를 자동으로 할당하기 위한 네트워크 관리 프로토콜  
 
 - 직접 **수동**으로 연결할 IP 설정 가능 (복잡하고 전문 지식이 필요)  
-![](%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202026-03-14%2013.29.07.png)<!-- {"width":283} -->
+<img width="283" alt="스크린샷 2026-03-14 13 29 07" src="https://github.com/user-attachments/assets/ca9bedb1-4d90-4fe9-8b5d-33ffde4a6327" />
+
+<br>
 
 - 많은 라우터와 게이트웨이 장비에 DHCP 서버가 내장되어있다.  
 - 사용자의 MAC 주소를 기반으로 라우터(공유기)를 통해 DHCP 요청을 보내며, IP를 자동으로 할당받는다.  
-![](%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202026-03-14%2013.39.11.png)<!-- {"width":654} -->
+<img width="654" alt="스크린샷 2026-03-14 13 39 11" src="https://github.com/user-attachments/assets/8f671200-f503-4e89-a7d4-65acc3de2cf3" />
+
+<br>
+
 - 사용자 기기에 내장된 DHCP 클라이언트에서 **자동으로 정보를 입력**하고 네트워크를 연결해준다.  
 - 공유기 소프트웨어를 통해 DHCP 설정을 변경할 수 있다.  
 
-![](%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202026-03-14%2013.46.40.png)<!-- {"width":497} -->
+<img width="497" alt="스크린샷 2026-03-14 13 46 40" src="https://github.com/user-attachments/assets/d448d270-bf25-45ce-a35a-a505670f593e" />
+<br>
+
 Reference : https://opentutorials.org/course/3265/20039  
 
-
+<br>
+<br>
 
 **NAT**(Network Address Translation)  
 > 패킷의 IP 주소 정보를 수정하여 IP 주소를 다른 주소로 매핑하는 방법  
 
 - 일반적으로 사설 네트워크(Private Network)에 속한 여러 개의 호스트가 하나의 공인 IP(Public IP) 주소를 사용하여 인터넷에 접속하기 위해 NAT를 사용한다.  
-![](%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202026-03-14%2018.50.18.png)<!-- {"width":613} -->
+<img width="613" alt="스크린샷 2026-03-14 18 50 18" src="https://github.com/user-attachments/assets/12adcb7b-2df8-499e-a722-04c160a07b7e" />
+
 Reference : https://www.youtube.com/watch?v=ctY8VtRd7cc  
+
+<br>
 
 1. LAN에 접속한 사용자 기기에서 외부망 연결을 요청  
 2. 라우터(공유기)에서 요청한 사설 IP(Private IP)를 기록  
